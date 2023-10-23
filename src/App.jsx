@@ -1,11 +1,10 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-
+import Header from "../public/components/Header";
 
 function App() {
-  return <div>
-    <h1>hello world</h1>
-  </div>;
+    return (
+      <Header />
+    )
 }
 
 export default App;
