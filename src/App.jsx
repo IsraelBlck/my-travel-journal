@@ -16,8 +16,8 @@ function App() {
 
   return (
     <div className="wrapper">
-      <section>
         <Header />
+      <section>
         {journalData}
       </section>
     </div>
