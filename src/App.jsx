@@ -4,9 +4,11 @@ import Journal from "../public/components/Journal";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Journal />
+    <div className="wrapper">
+      <section>
+        <Header />
+        <Journal />
+      </section>
     </div>
   );
 }
