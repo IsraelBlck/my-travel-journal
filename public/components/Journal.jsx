@@ -1,12 +1,12 @@
 import React from "react";
 
-export default function Journal() {
+export default function Journal(props) {
   return (
     <div className="main">
       <div className="journal flex">
         <img
           className="journal--image"
-          src="https://source.unsplash.com/WLxQvbMyfas"
+          src={props.item.img}
           alt="Japan"
         />
         <div className="journal--details">
@@ -16,21 +16,19 @@ export default function Journal() {
               src="../images/Fill 219.png"
               alt="location icon"
             />
-            <span className="location--name">JAPAN</span>
+            <span className="location--name">{props.item.location}</span>
             <span className="location--link">
               <a href="#">View on Google Maps</a>
             </span>
           </div>
-          <h2 className="journal--title">Mount Fuji</h2>
-          <p className="journal--date">12 Jan, 2021 - 24 Jan, 2021</p>
+          <h2 className="journal--title">{props.item.title}</h2>
+          <p className="journal--date">{props.item.date}</p>
           <p className="journal--description">
-            Mount Fuji is the tallest mountain in Japan, standing at 3,776
-            meters (12,380 feet). Mount Fuji is the single most popular tourist
-            site in Japan, for both Japanese and foreign tourists.
+            {props.item.description}
           </p>
         </div>
       </div>
-      <hr className="hr"/>
+      <hr className="hr" />
     </div>
   );
 }
